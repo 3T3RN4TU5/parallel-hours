@@ -1,0 +1,70 @@
+.man {
+  position: relative;
+  padding: 24vh var(--gutter) 26vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 5fr);
+  gap: 4vw;
+}
+
+.side {
+  position: relative;
+}
+
+.label {
+  position: sticky;
+  top: 40vh;
+  display: block;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone-62);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.24em;
+  font-family: var(--f-serif);
+  font-size: clamp(34px, 5.4vw, 100px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.word {
+  opacity: 0.14;
+  transition: opacity 0.2s;
+}
+
+.acc {
+  font-style: italic;
+  color: var(--acc);
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--bone-72);
+  max-width: 900px;
+}
+
+.notes p {
+  border-top: 1px solid var(--bone-20);
+  padding-top: 14px;
+}
+
+.strong {
+  color: var(--bone);
+}

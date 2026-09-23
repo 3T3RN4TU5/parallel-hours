@@ -1,0 +1,144 @@
+.tr {
+  position: relative;
+  height: 440vh;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.vline {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--bone-8);
+}
+
+.hline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--bone-8);
+}
+
+.top {
+  position: absolute;
+  top: 92px;
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-62);
+}
+
+.num {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 15vh;
+  font-family: var(--f-display);
+  font-weight: 200;
+  font-size: clamp(110px, 19vw, 360px);
+  line-height: 1;
+  height: 1em;
+  overflow: hidden;
+  color: var(--bone);
+}
+
+.numCol {
+  transition: transform 1s var(--ease-inout);
+}
+.numCol > div {
+  height: 1em;
+}
+
+.caps {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 15vh;
+  width: min(420px, calc(100% - 56px));
+  height: 210px;
+}
+
+.cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--acc);
+  margin-bottom: 14px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-family: var(--f-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 0.9;
+}
+
+.body {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--bone-78);
+}
+
+.progress {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.track {
+  position: relative;
+  height: 1px;
+  background: var(--bone-20);
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  background: var(--bone);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.labels span {
+  transition: color 0.4s;
+}
+.labels span:nth-child(2) {
+  text-align: center;
+}
+.labels span:nth-child(3) {
+  text-align: right;
+}

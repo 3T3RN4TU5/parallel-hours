@@ -1,0 +1,138 @@
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 600px;
+  padding: 0 var(--gutter) 8vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.meta {
+  position: absolute;
+  top: 92px;
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-62);
+}
+
+.h1 {
+  font-family: var(--f-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.8;
+  letter-spacing: -0.005em;
+  font-size: clamp(84px, 21vw, 440px);
+  color: var(--bone);
+  mix-blend-mode: difference;
+}
+
+.line {
+  display: flex;
+}
+
+.char {
+  display: inline-block;
+  transition: font-weight 0.6s var(--ease-out);
+}
+.char:hover {
+  font-weight: 200;
+}
+
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 0.06em;
+  margin-top: -0.06em;
+}
+
+.in {
+  display: inline-block;
+  transform: translateY(110%);
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0.06em 0 0.04em 1.2vw;
+}
+
+.isa {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 0.36em;
+  line-height: 1;
+  color: var(--acc);
+}
+
+.note {
+  font-family: var(--f-mono);
+  font-weight: 400;
+  font-size: clamp(10px, 0.9vw, 13px);
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bone);
+  max-width: 24ch;
+}
+
+.foot {
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.scroll {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tick {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: var(--bone);
+}
+
+.holdWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.dim {
+  color: var(--bone-62);
+}
+
+.meter {
+  position: relative;
+  width: 140px;
+  height: 1px;
+  background: rgba(237, 232, 223, 0.25);
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  background: var(--acc);
+  transform: scaleX(0);
+  transform-origin: left;
+}

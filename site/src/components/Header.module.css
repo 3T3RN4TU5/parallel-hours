@@ -1,0 +1,99 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--header-y) var(--gutter);
+  mix-blend-mode: difference;
+  color: var(--bone);
+  pointer-events: none;
+}
+
+.logo {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--f-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  color: var(--bone);
+}
+.logo:hover {
+  color: var(--bone);
+}
+
+.light {
+  font-weight: 200;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  pointer-events: auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menuBtn {
+  gap: 12px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+
+.bar {
+  width: 2px;
+  height: 3px;
+  background: var(--bone);
+}
+
+.icon {
+  position: relative;
+  width: 26px;
+  height: 10px;
+}
+
+.l1,
+.l2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--bone);
+  transition:
+    transform 0.5s var(--ease-inout),
+    top 0.5s var(--ease-inout);
+}
+.l1 {
+  top: 1px;
+}
+.l2 {
+  top: 8px;
+}
+.open .l1 {
+  top: 4px;
+  transform: rotate(45deg);
+}
+.open .l2 {
+  top: 4px;
+  transform: rotate(-45deg);
+}

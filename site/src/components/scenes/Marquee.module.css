@@ -1,0 +1,39 @@
+.mq {
+  position: relative;
+  padding: 10vh 0 6vh;
+  overflow: hidden;
+}
+
+.bandA {
+  transform: rotate(-3deg);
+  background: var(--bone);
+  color: var(--ink);
+  padding: 1.6vw 0;
+  margin: 0 -4vw;
+}
+
+.bandB {
+  transform: rotate(2deg);
+  padding: 2vw 0;
+  margin: 1vw -4vw 0;
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  font-family: var(--f-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(56px, 9vw, 170px);
+  line-height: 0.9;
+  will-change: transform;
+}
+.row span {
+  padding-right: 0.3em;
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--acc);
+}

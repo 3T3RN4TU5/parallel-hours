@@ -1,0 +1,121 @@
+:root {
+  /* Colour */
+  --ink: #0b0b0c;
+  --plate: #141416;
+  --plate-2: #101012;
+  --bone: #ede8df;
+  --bone-78: rgba(237, 232, 223, 0.78);
+  --bone-72: rgba(237, 232, 223, 0.72);
+  --bone-62: rgba(237, 232, 223, 0.62);
+  --bone-40: rgba(237, 232, 223, 0.4);
+  --bone-20: rgba(237, 232, 223, 0.2);
+  --bone-18: rgba(237, 232, 223, 0.18);
+  --bone-8: rgba(237, 232, 223, 0.08);
+  --acc: #c8ff3c;
+
+  /* Type */
+  --f-display: var(--font-display), 'Big Shoulders Display', Oswald, Impact, sans-serif;
+  --f-serif: var(--font-serif), Georgia, serif;
+  --f-mono: var(--font-mono), ui-monospace, monospace;
+
+  /* Spacing */
+  --gutter: 28px;
+  --header-y: 22px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+  --t-micro: 0.25s;
+  --t-component: 0.6s;
+  --t-section: 0.95s;
+  --t-cinematic: 1.4s;
+
+  /* Layers */
+  --z-gl: 0;
+  --z-preview: 20;
+  --z-grain: 55;
+  --z-progress: 60;
+  --z-menu: 70;
+  --z-header: 75;
+  --z-wipe: 85;
+  --z-pre: 95;
+  --z-cursor: 100;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--ink);
+  overscroll-behavior: none;
+}
+
+body {
+  color: var(--bone);
+  font-family: var(--f-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+a {
+  color: var(--bone);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--acc);
+}
+
+::selection {
+  background: var(--acc);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 4px;
+}
+
+html.ph-cursor,
+html.ph-cursor * {
+  cursor: none !important;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
