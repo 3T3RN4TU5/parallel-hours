@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { EMAIL } from '@/lib/content';
+import { EMAIL, GITHUB } from '@/lib/content';
 import { rt, clamp01, smoothstep, enterProgress } from '@/lib/runtime';
 import { addTick } from '@/lib/ticker';
 import { useMagnetic } from '@/lib/magnetic';
@@ -14,18 +14,15 @@ const time = (tz: string) => {
 };
 
 function Clocks() {
-  const [t, setT] = useState({ l: '--:--:--', m: '--:--:--' });
+  const [t, setT] = useState('--:--:--');
   useEffect(() => {
-    const upd = () => setT({ l: time('Europe/Lisbon'), m: time('America/Toronto') });
+    const upd = () => setT(time('Asia/Kolkata'));
     upd();
     const id = setInterval(upd, 1000);
     return () => clearInterval(id);
   }, []);
   return (
-    <>
-      <div className={s.col}><span className={s.dim}>Lisbon</span><time suppressHydrationWarning>{t.l}</time></div>
-      <div className={s.col}><span className={s.dim}>Montréal</span><time suppressHydrationWarning>{t.m}</time></div>
-    </>
+    <div className={s.col}><span className={s.dim}>India — IST</span><time suppressHydrationWarning>{t}</time></div>
   );
 }
 
@@ -71,7 +68,7 @@ export default function Finale({ onTop }: { onTop: () => void }) {
         <nav aria-label="Social" className={s.col}>
           <span className={s.dim}>Elsewhere</span>
           <span className={s.social}>
-            <a href="#">Instagram</a><a href="#">Vimeo</a><a href="#">GitHub</a>
+            <a href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </span>
         </nav>
         <div className={`${s.col} ${s.start}`}>

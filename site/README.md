@@ -8,7 +8,7 @@ npm run dev        # http://localhost:3000
 npm run build && npm start
 ```
 
-Set `NEXT_PUBLIC_SITE_URL` for canonical/OG/sitemap URLs (defaults to `https://parallelhours.studio`).
+Set `NEXT_PUBLIC_SITE_URL` for canonical/OG/sitemap URLs (defaults to `https://parallel-hours.vercel.app`).
 
 ## Stack
 
@@ -31,4 +31,4 @@ Device tiers: on mobile or ≤4 cores the object uses lower detail and fewer par
 ## Placeholders to replace
 
 - Project imagery is procedural canvas art (`src/lib/gen.ts`). Swap in real WebP/AVIF.
-- Social links (`#`), the studio, the projects and the email address are all fictional.
+- The projects listed in Worlds/Index are still fictional placeholders.

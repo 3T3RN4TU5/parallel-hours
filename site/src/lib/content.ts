@@ -4,8 +4,9 @@ export const GRAIN = true;
 /** Multiplies the object's noise displacement amplitude (range 0.3–2). */
 export const INTENSITY = 2;
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://parallelhours.studio';
-export const EMAIL = 'hello@parallelhours.studio';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://parallel-hours.vercel.app';
+export const EMAIL = 'kumarjeevan20012410@gmail.com';
+export const GITHUB = 'https://github.com/Jeevan2410';
 
 export const SCENES = ['Introduction', 'Discovery', 'Transformation', 'Worlds', 'Index', 'Finale'] as const;
 

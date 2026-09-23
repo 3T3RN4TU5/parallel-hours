@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Big_Shoulders, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
-import { EMAIL, SITE_URL } from '@/lib/content';
+import { EMAIL, GITHUB, SITE_URL } from '@/lib/content';
 import './globals.css';
 
 const display = Big_Shoulders({ subsets: ['latin'], axes: ['opsz'], variable: '--font-display', display: 'swap', adjustFontFallback: false });
@@ -39,10 +39,8 @@ const jsonLd = {
   url: SITE_URL,
   email: EMAIL,
   description,
-  address: [
-    { '@type': 'PostalAddress', addressLocality: 'Lisbon', addressCountry: 'PT' },
-    { '@type': 'PostalAddress', addressLocality: 'Montréal', addressCountry: 'CA' },
-  ],
+  address: { '@type': 'PostalAddress', addressCountry: 'IN' },
+  sameAs: [GITHUB],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

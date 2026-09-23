@@ -56,7 +56,7 @@ export default function Hero() {
   return (
     <section ref={root} id="introduction" data-scene="0" data-cursor="Drag · Hold" aria-label="Introduction" className={s.hero}>
       <div className={s.meta}>
-        <span>[ 38.7223° N — 9.1393° W ]</span>
+        <span>[ 20.5937° N — 78.9629° E ]</span>
         <span>Independent interactive studio</span>
         <span>Scene 01 / Introduction</span>
       </div>
