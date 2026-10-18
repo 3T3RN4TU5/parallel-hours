@@ -2,6 +2,8 @@
 
 This is a **handoff bundle** from Claude Design (claude.ai/design).
 
+![Parallel Hours hero: MOTION is a MATERIAL in giant type beside a low-poly 3D crystal](docs/screenshot.jpg)
+
 A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
 
 ## What you should do — IMPORTANT
